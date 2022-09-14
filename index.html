@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/a3758c3227.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <title>Weather widget</title>
+    </head>
+    <body onload="weather()">
+        <div id="mainTab">
+            <div id="topSection">
+                <div>
+                    <div><input type="text" id="city_text" placeholder="Введите город: Москва"></div>
+                    <button type="button" onclick="cityCheck()" id="button">Поиск</button>
+                </div>
+                <div><p id="time" class="text">Time</p></div>
+            </div>
+            <div id="section2">
+                <div id="icon"><i id="icon_image"></i></div>
+                <div id="bottomSection">
+                    <div id="list">
+                        <div>
+                            <p id="city" class="text">
+                                
+                            </p>
+                        </div>
+                        <div>
+                            <p id="windspeed" class="text">
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p id="temperature" class="text">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
