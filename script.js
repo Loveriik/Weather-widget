@@ -119,8 +119,8 @@ async function showWeather (position) {
 
 async function showCity (position) {
     const cityUrl = `https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`;
-    const response1 = await fetch(cityUrl);
-    const data1 = await response1.json();
+    const response = await fetch(cityUrl);
+    const data1 = await response.json();
     const city = document.getElementById('city');
     city.innerHTML = data1.address.city + ', ' + data1.address.country;
 }
@@ -129,8 +129,8 @@ async function cityCheck(){
 
     const cityName = document.getElementById('city_text').value
     const cityUrl = `http://api.openweathermap.org/geo/1.0/direct?q=<${cityName}>&appid=2be791dc49af83ecf84ed02d7c165f9f`
-    const response2 = await fetch(cityUrl);
-    const data2 = await response2.json();
+    const response = await fetch(cityUrl);
+    const data2 = await response.json();
     if (data2.length == 0) {
         alert('Значение не корректно');
     }
