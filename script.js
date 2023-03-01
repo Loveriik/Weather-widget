@@ -1,6 +1,8 @@
 function weather() {
     navigator.geolocation.getCurrentPosition(showPosition);
-    /*Отображение времени*/
+
+    /*Show current time*/
+
     setInterval (function() {
         const date = new Date();
         let hours = date.getHours();
@@ -34,7 +36,7 @@ async function showWeather (position) {
     const temp = document.getElementById('temperature');
     temp.innerHTML = data.current_weather.temperature + '°';
     const speed = document.getElementById('windspeed');
-    speed.innerHTML = 'Скорость ветра: ' + data.current_weather.windspeed;
+    speed.innerHTML = 'Wind speed: ' + data.current_weather.windspeed;
 
     const image = document.getElementById('icon_image');
     const color = document.getElementById('mainTab');
